@@ -62,7 +62,7 @@ body {
   margin-left: 146px;
 }
 
-.footer-logo {
+.c-footer-logo {
   height: 24px;
   width: auto;
   gap: 24px;
@@ -86,7 +86,10 @@ body {
 }
 
 .footer-logo-container{
+  display: flex;
+  align-items: center;
   height: 32px;
   width: auto;
   margin-left: 500px;
+  gap: 16px;
 }
