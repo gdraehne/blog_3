@@ -51,8 +51,11 @@ body {
 .site-footer {
   display: flex;
   background-color: #4EA487;
+  width: 1440px;
   padding: 24px;
   height: 152px;
+  position: absolute;
+  bottom: 0px;
 }
 
 .site-footer-inner {
