@@ -1,27 +1,52 @@
 .hero-content {
   position: absolute;
   width: 1440px;
-  height: 515px;
+  height: 516px;
   left: calc(50% - 1440px/2);
   top: 128px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .hero-yellow-panel {
   position: absolute;
   inset: 0;
-  background-color: #F2C55C;
+  z-index: 2;
+  animation: hero-panel-slide-out 3.4s ease-out forwards;
+}
+
+.hero-yellow-panel-2 {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  animation: hero-panel-slide-in 3.5s ease-out forwards;
+}
+
+.hero-image {
+  position: absolute;
+  width: 1440px;
+  height: 515px;
+  inset: 0;
   z-index: 0;
+}
+
+.hero-image img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-text {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 345px;
-  animation: hero-slide-up 0.5s ease-out forwards,
-             hero-slide-left 1s ease-out 0.5s forwards;
+  
+   
 }
 
 .hero-title {
@@ -31,8 +56,10 @@
   line-height: 1.15;
   color: #3D2314;
   margin-bottom: 32px;
-  animation: hero-fade-in 1s ease-in-out;
-  animation: hero-slide-left 4s;
+  animation:
+    hero-fade-in 1s ease-out forwards,
+    hero-slide-up 1s ease-in-out forwards,
+    hero-slide-left 1.2s ease-out 1.5s forwards;
 }
 
 .hero-desc {
@@ -41,33 +68,23 @@
   font-size: 28px;
   line-height: 1.45;
   color: #3D2314;
-  animation: hero-fade-in 2s ease-in-out;
-  animation: hero-slide-left 4s;
+  animation:
+    hero-fade-in 1.5s ease-out forwards,
+    hero-slide-up 1s ease-in-out forwards,
+    hero-slide-left 1.2s ease-out 1.5s forwards;
 }
 
-@keyframes hero-slide-up {
-  from {
-    transform: translateY(-60px);
-    opacity: 0;
-    
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-    
-  }
+.hero-spin{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  animation: spin 5s linear infinite;
+  z-index: 3;
 }
 
-@keyframes hero-slide-left {
-  from {
-    transform: translateX(0);
-    
-  }
-  to {
-    transform: translateX(-60px);
-    
-  }
-}
 
 @keyframes hero-fade-in {
   from {
@@ -78,6 +95,42 @@
   }
 }
 
+@keyframes hero-slide-up {
+  from {
+    transform: translateY(60px);
+  }
 
+  to {
+    transform: translateY(0);
+  }
+}
 
+@keyframes hero-slide-left {
+  from {
+    transform: translateX(0);
+  }
 
+  to {
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes hero-panel-slide-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes hero-panel-slide-in {
+  from {
+    transform: translateX(498px);
+  }
+
+  to {
+    transform: translateX(-50px);
+  }
+}
