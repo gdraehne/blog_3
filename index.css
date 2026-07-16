@@ -134,3 +134,30 @@
     transform: translateX(-50px);
   }
 }
+
+@keyframes hero-spin-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  } 
+}
+
+@keyframes hero-spin-slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(45%);
+  } 
+}
+
+@keyframes hero-spin-right{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
