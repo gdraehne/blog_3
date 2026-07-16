@@ -57,9 +57,9 @@
   color: #3D2314;
   margin-bottom: 32px;
   animation:
-    hero-fade-in 1s ease-out forwards,
+    hero-fade-in 1.5s ease-out forwards,
     hero-slide-up 1s ease-in-out forwards,
-    hero-slide-left 1.2s ease-out 1.5s forwards;
+    hero-slide-left 3.5s ease-out forwards;
 }
 
 .hero-desc {
@@ -69,20 +69,45 @@
   line-height: 1.45;
   color: #3D2314;
   animation:
-    hero-fade-in 1.5s ease-out forwards,
+    hero-fade-in 2s ease-out forwards,
     hero-slide-up 1s ease-in-out forwards,
-    hero-slide-left 1.2s ease-out 1.5s forwards;
+    hero-slide-left 3.5s ease-out forwards;
 }
 
 .hero-spin{
   position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 40%;
-  left: 40%;
+  width: 160px;
+  height: 160px;
+  left: 43%;
   transform: translate(-50%, -50%);
   animation: spin 5s linear infinite;
   z-index: 3;
+  animation: 
+  hero-spin-slide-up 2s ease-out 4s both,
+  hero-spin-fade-in 2s 4s both;
+}
+
+.hero-spin > img {
+  width: 160px;
+  height: 160px;
+  animation: hero-spin-right 8s linear 6s infinite;
+}
+
+.hero-spin-orb {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  animation:
+    hero-spin-fade-in 2s 4s both;
+}
+
+.hero-spin-orb img {
+  width: 100%;
+  height: 100%;
 }
 
 
