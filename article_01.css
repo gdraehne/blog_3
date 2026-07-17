@@ -1,0 +1,95 @@
+/* palanquin-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Palanquin';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonds/palanquin-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* palanquin-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Palanquin';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonds/palanquin-v17-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* arima-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Arima';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonds/arima-v7-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* arima-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Arima';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonds/arima-v7-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Palanquin';
+  font-style: normal;
+  font-weight: 400;
+}
+
+section {
+    padding-top: 80px;
+}
+
+h2 {
+  font-family: 'Palanquin';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  color: #4EA487;
+}
+
+h1 {
+  font-family: 'Arima';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  color: #F1C953;
+}
+
+.headline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 900px;
+}
+
+.headline_intro {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.headline_info_author {
+    display: flex;
+}
+
+.author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4EA48733;
+    border-radius: 30px;
+}
+
+.author img {
+    height: 120px;
+    width: 120px;
+}
+
+.author_text {
+    width: 240px;
+}
