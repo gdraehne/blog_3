@@ -50,6 +50,7 @@ h2 {
   font-weight: 600;
   font-size: 40px;
   color: #4EA487;
+  display: inline-block;
 }
 
 h1 {
@@ -58,8 +59,13 @@ h1 {
   font-weight: 700;
   font-size: 64px;
   color: #F1C953;
+  display: inline-block;
+
 }
 
+.intro {
+  font-size: 32px;
+}
 .headline {
     display: flex;
     flex-wrap: wrap;
@@ -75,6 +81,18 @@ h1 {
 
 .headline_info_author {
     display: flex;
+    justify-content: space-between;
+    line-height: 1.15;
+}
+
+.headline_info_author p {
+  color: #54370D;
+}
+
+.page_info {
+  width: 575px;
+  height: 19px;
+
 }
 
 .author {
@@ -83,13 +101,31 @@ h1 {
     align-items: center;
     background-color: #4EA48733;
     border-radius: 30px;
+    padding: 16px;
 }
 
 .author img {
     height: 120px;
     width: 120px;
 }
+.author_name {
+  padding-top: 12px;
+  font-family: 'Arima';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.author_jobtitle {
+  font-family: 'Arima';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+
+}
 
 .author_text {
     width: 240px;
+    padding-top: 8px;
+    font-size: 16px;
 }
