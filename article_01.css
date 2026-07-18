@@ -51,6 +51,10 @@
 main {
   padding-left: 120px;
   padding-right: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 section {
     padding-top: 80px;
@@ -142,20 +146,47 @@ h1 {
     font-size: 16px;
 }
 
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+}
+
 h3 {
   font-family: 'Arima';
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
   color: #54370D;
-  display: flex;
-  justify-content: center;
 }
 
 .slider {
+  width: 1100px;
+  height: 600px;
   display: flex;
 }
 
 .slider_element {
-  transform: perspective(300px) rotateY(20deg) translateX(-20px);
+  z-index: 1;
+  width: 66%;
+  height: 350px;
+  border-radius: 16px;
+
+  transform: perspective(250px) rotateY(10deg) translateX(-100px);
+  transform-origin: 50% 50%;
+
+  transition: all 250ms ease-in-out;
+}
+
+.slider_element:hover{
+  z-index: 2;
+
+  transform: perspective(2500px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+}
+
+.slider_element:hover~.slider_element{
+  transform: perspective(250px) rotateY(-10deg) translateX(100px);
+
 }
