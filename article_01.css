@@ -22,6 +22,14 @@
   font-weight: 400;
   src: url('./assets/fonds/arima-v7-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+/* arima-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Arima';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonds/arima-v7-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 /* arima-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -40,6 +48,10 @@
   font-weight: 400;
 }
 
+main {
+  padding-left: 120px;
+  padding-right: 120px;
+}
 section {
     padding-top: 80px;
 }
@@ -128,4 +140,22 @@ h1 {
     width: 240px;
     padding-top: 8px;
     font-size: 16px;
+}
+
+h3 {
+  font-family: 'Arima';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  color: #54370D;
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  display: flex;
+}
+
+.slider_element {
+  transform: perspective(300px) rotateY(20deg) translateX(-20px);
 }
