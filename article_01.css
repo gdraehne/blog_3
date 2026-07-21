@@ -46,6 +46,9 @@
   font-family: 'Palanquin';
   font-style: normal;
   font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #3D3D3D;
 }
 
 main {
@@ -147,6 +150,8 @@ h1 {
 }
 
 .carousel {
+  width: 1100px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,30 +168,45 @@ h3 {
 }
 
 .slider {
-  width: 1100px;
-  height: 600px;
+  width: 1300px;
+  height: 440px;
   display: flex;
+  align-items: center; 
+  justify-content: center;
+
 }
 
 .slider_element {
   z-index: 1;
-  width: 66%;
   height: 350px;
+  width: 440px;
   border-radius: 16px;
 
-  transform: perspective(250px) rotateY(10deg) translateX(-100px);
+  transform: perspective(500px) rotateY(20deg) translateX(0px);
   transform-origin: 50% 50%;
 
   transition: all 250ms ease-in-out;
 }
-
+.slider:has(.slider_element:hover) .slider_element:not(:hover):not(.slider_element:hover ~ .slider_element) {
+  transform: perspective(500px) rotateY(20deg) translateX(-50px);
+}
 .slider_element:hover{
   z-index: 2;
 
-  transform: perspective(2500px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+  transform: perspective(500px) rotateY(0deg) translateX(0px) scaleX(1.1) scaleY(1.1);
 }
 
 .slider_element:hover~.slider_element{
-  transform: perspective(250px) rotateY(-10deg) translateX(100px);
+  transform: perspective(500px) rotateY(-20deg) translateX(50px);
 
+}
+
+.list {
+  width: 1000px;
+  height: auto;
+  overflow-wrap: break-word;
+}
+ol {
+  padding-top: 30px;
+  padding-left: 30px;
 }
