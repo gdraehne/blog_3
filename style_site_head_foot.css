@@ -4,6 +4,46 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Arima';
+  src: url('assets/fonds/arima-v7-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arima';
+  src: url('assets/fonds/arima-v7-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arima';
+  src: url('assets/fonds/arima-v7-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Palanquin';
+  src: url('assets/fonds/palanquin-v17-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Palanquin';
+  src: url('assets/fonds/palanquin-v17-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   max-width: 1440px;
   margin: 0 auto;
