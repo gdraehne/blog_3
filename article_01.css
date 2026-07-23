@@ -206,7 +206,55 @@ h3 {
   height: auto;
   overflow-wrap: break-word;
 }
-ol {
+
+.list ol {
   padding-top: 30px;
   padding-left: 30px;
+}
+
+.pro_tipps {
+  width: 1130px;
+  height: auto;
+}
+
+.pro_tipps_text {
+  margin-left: 50px;
+  margin-top: 80px;
+  padding: 16px 12px;
+  background-color: #4EA48733;
+  border-radius: 30px;
+
+}
+.lightbulb {
+    position: absolute;
+
+}
+.pro_tipps_text ol {
+  padding-left: 30px;
+}
+
+.pro_tipps_text a {
+  text-decoration: none;
+  font-family: 'Palanquin';
+  font-weight: bold;
+  font-size: 24px;
+  color: #4EA487;
+
+}
+.share {
+  width: 500px;
+  height: auto;
+}
+.share > p {
+  font-family: 'Arima';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  color: #54370D;
+  position: absolute;
+
+}
+
+.share_arrow {
+  padding-top: 48px;
 }
