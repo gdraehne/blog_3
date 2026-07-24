@@ -193,8 +193,8 @@
 
 .main {
   width: 1200px;
-  height: 2020px;
-  margin-top: 749px;
+  min-height: 2020px;
+  margin-top: 600px;
   margin-left: 120px;
   background-color: #ffffff;
   display: flex;
@@ -306,3 +306,252 @@
   background-color: #F1C953;
 }
 
+.main-faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 120px;
+
+}
+
+.faq-icon {
+  height: 48px;
+  width: 48px;
+}
+
+.haq-h {
+  height: 49px;
+  width: 93px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.faq-item {
+  background-color: #F1C953;
+  border-radius: 16px;
+  padding-top: 16px;
+  padding-right: 14px;
+  padding-bottom: 16px;
+  padding-left: 14px;
+
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  font-family: Palanquin, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #3D2314;
+
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: "";
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  margin-left: 16px;
+  border-right: 3px solid #3D2314;
+  border-bottom: 3px solid #3D2314;
+  transform: rotate(45deg);
+  transition: transform 200ms ease;
+}
+
+.faq-item[open] .faq-question::after {
+  transform: rotate(-135deg);
+}
+
+.faq-answer {
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-top: 16px;
+  padding: 20px 24px;
+  font-family: Palanquin, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3D2314;
+}
+
+.main-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 120px;
+
+}
+
+.c-pin {
+  width: 48px;
+  height: 48px;
+}
+
+.c-h {
+  width: 313px;
+  height: 62px;
+}
+
+.contact-text {
+  margin-top: 24px;
+  font-family: Palanquin;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 24px;
+  text-align: center;
+}
+
+.contact-form {
+  width: 900px;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form-row {
+  display: flex;
+  gap: 80px;
+}
+
+.form-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-field label {
+  font-family: Palanquin, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #3D2314;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  font-family: Palanquin, sans-serif;
+  font-size: 16px;
+  color: #3D2314;
+  border: none;
+  border-bottom: 1px solid #3D2314;
+  background: transparent;
+  padding: 4px 0 8px;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-field textarea {
+  min-height: 24px;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-bottom: 2px solid #F1C953;
+}
+
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  font-family: Palanquin, sans-serif;
+  font-size: 15px;
+  color: #3D2314;
+}
+
+.form-consent input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: #3D2314;
+  flex-shrink: 0;
+}
+
+.privacy-link {
+  color: #3D2314;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.form-send-btn {
+  font-family: Palanquin, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #3D2314;
+  background-color: #ffffff;
+  border: 2px solid #3D2314;
+  border-radius: 999px;
+  padding: 12px 56px;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.form-send-btn:hover {
+  background-color: #F1C953;
+}
+
+.form-feedback {
+  display: none;
+  position: relative;
+  width: 900px;
+  box-sizing: border-box;
+  margin-top: 32px;
+  padding: 16px 56px;
+  background-color: #F1C953;
+  border-radius: 12px;
+  font-family: Palanquin, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #3D2314;
+  text-align: center;
+}
+
+#form-sent:target {
+  display: block;
+}
+
+.form-feedback-close {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: #3D2314;
+  text-decoration: none;
+  font-weight: 700;
+}
