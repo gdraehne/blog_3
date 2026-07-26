@@ -201,6 +201,10 @@ h3 {
   transition: all 250ms ease-in-out;
 }
 
+.slider_element:not(:first-child) {
+  margin-left: -20px;
+}
+
 .slider:has(.slider_element:hover) .slider_element:not(:hover):not(.slider_element:hover ~ .slider_element) {
   transform: perspective(500px) rotateY(20deg) translateX(-50px);
 }
