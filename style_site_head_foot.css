@@ -55,9 +55,14 @@ body {
 
 .site-header {
   background-color: #4b9c81;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .site-header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 24px;
   height: 128px;
   display: flex;
@@ -88,15 +93,86 @@ body {
 }
 
 .nav-link:last-child {
-  margin-right: 0;          
+  margin-right: 0;
+}
+
+a[href="index.html#highlights"] {
+  position: relative;
+}
+
+a[href="index.html#highlights"]::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 121px;
+  height: 18px;
+  background-image: url('assets/header/hover/high_hover.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+a[href="index.html#highlights"]:hover::after {
+  opacity: 1;
+}
+
+a[href="index.html#faq"] {
+  position: relative;
+}
+
+a[href="index.html#faq"]::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  bottom: 0px;
+  width: 56px;
+  height: 9px;
+  background-image: url('assets/header/hover/faq_hover.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+a[href="index.html#faq"]:hover::after {
+  opacity: 1;
+}
+
+a[href="index.html#contact"] {
+  position: relative;
+}
+
+a[href="index.html#contact"]::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  bottom: -3px;
+  width: 92px;
+  height: 11px;
+  background-image: url('assets/header/hover/contact_hover.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+a[href="index.html#contact"]:hover::after {
+  opacity: 1;
 }
 
 .site-footer {
   display: flex;
   background-color: #4EA487;
-  width: 1440px;
   padding: 24px;
   height: 152px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw)
 }
 
 .site-footer-inner {
@@ -104,6 +180,9 @@ body {
   align-items: center;
   width: 1200px;
   margin-left: 146px;
+  max-width: 1440px;
+  margin: 0 auto;
+  
 }
 
 .c-footer-logo {
