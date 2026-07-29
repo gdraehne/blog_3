@@ -1,0 +1,156 @@
+
+.nav-home {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+
+ .footer-logo-container {  
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  
+
+  .site-header-inner {
+    height: auto;
+    padding: 14px 20px;
+    justify-content: center;
+  }
+
+  .header-logo {
+    margin: 0;
+    height: 36px;
+  }
+
+  .site-header-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    height: 64px;
+    background-color: #F1C953;
+    justify-content: space-evenly;
+  }
+
+  .nav-link {
+    margin-right: 0;
+  }
+
+  .nav-home {
+    display: flex;
+  }
+
+  .nav-link img {
+    width: 28px;
+    height: 28px;
+  }
+
+ 
+  a[href="index.html#highlights"] img {
+    content: url('assets/header/respon/menu/rocket_launch.svg');
+  }
+
+  a[href="index.html#faq"] img {
+    content: url('assets/header/respon/menu/live_help.svg');
+  }
+
+  a[href="index.html#contact"] img {
+    content: url('assets/header/respon/menu/person_pin.svg');
+  }
+
+  
+  a[href="index.html#highlights"]::after,
+  a[href="index.html#faq"]::after,
+  a[href="index.html#contact"]::after {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 64px;
+  }
+
+  
+
+  .site-footer {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+    
+  }
+
+  .site-footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    background-color: #4EA487;
+    padding: 20px;
+    row-gap: 10px;
+  }
+
+  
+  .footer-text-container {
+    display: contents;
+  }
+
+  .footer-text {
+    font-size: 14px;
+  }
+
+ 
+  .footer-text:nth-child(2) {
+    order: 1;
+    flex-basis: 100%;
+  }
+
+  
+  .footer-text:nth-child(3) {
+    order: 2;
+    flex-basis: 100%;
+  }
+
+  
+  .c-footer-logo {
+    order: 3;
+    height: 20px;
+  }
+
+  .footer-text:nth-child(1) {
+    order: 4;
+    margin-left: 8px;
+  }
+
+  .footer-logo-container {
+    
+    order: 5;
+    margin-left: auto;
+    height: 24px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 412px){
+
+  .footer-logo-container {
+    height: 18px;
+    width: auto;
+    gap: 6px;
+  }
+
+  .footer-logo-container img {
+    height: 18px;
+    width: auto;
+  }
+
+}
+

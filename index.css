@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('assets/fonds/playfair-display-v40-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .hero-content {
   position: absolute;
   width: 1440px;
@@ -316,6 +324,7 @@
 .faq-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   margin-top: 120px;
 
@@ -326,7 +335,7 @@
   width: 48px;
 }
 
-.haq-h {
+.faq-h {
   height: 49px;
   width: 93px;
 }
@@ -404,6 +413,7 @@
 .contact-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   margin-top: 120px;
 
