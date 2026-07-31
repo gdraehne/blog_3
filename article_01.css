@@ -126,6 +126,33 @@ h1 {
 .page_info {
   width: 575px;
   height: 19px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page_info_element {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.page_info_element>p {
+  font-size: 16px;
+}
+
+.img_16x18 {
+  width: 16px;
+  height: 18px;
+}
+
+.img_20x7 {
+  width: 20px;
+  height: 7px;
+}
+
+.img_20x14 {
+  width: 20px;
+  height: 14px;
 }
 
 .author {
@@ -182,7 +209,7 @@ h3 {
 }
 
 .slider {
-  width: 1300px;
+  width: 1100px;
   height: 440px;
   display: flex;
   align-items: center;
@@ -366,7 +393,4 @@ h3 {
 }
 
 
-
-
-
-
+@media (max-width: 768px) {}
