@@ -71,7 +71,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 section {
@@ -124,7 +124,8 @@ h1 {
 }
 
 .page_info {
-  width: 575px;
+  max-width: 575px;
+  width: 100%;
   height: 19px;
   display: flex;
   justify-content: space-between;
@@ -156,6 +157,7 @@ h1 {
 }
 
 .author {
+  max-height: 430px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -393,4 +395,28 @@ h3 {
 }
 
 
-@media (max-width: 768px) {}
+@media screen and (max-width: 1280px){
+main {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+.intro {
+  font-size: 24px;
+}
+.page_info_element>p {
+  font-size: 14px;
+}
+
+.author_text {
+  font-size: 14px;
+}
+}
