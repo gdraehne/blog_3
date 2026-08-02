@@ -71,7 +71,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 section {
@@ -124,11 +124,40 @@ h1 {
 }
 
 .page_info {
-  width: 575px;
+  max-width: 575px;
+  width: 100%;
   height: 19px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page_info_element {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.page_info_element>p {
+  font-size: 16px;
+}
+
+.img_16x18 {
+  width: 16px;
+  height: 18px;
+}
+
+.img_20x7 {
+  width: 20px;
+  height: 7px;
+}
+
+.img_20x14 {
+  width: 20px;
+  height: 14px;
 }
 
 .author {
+  max-height: 430px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,7 +211,7 @@ h3 {
 }
 
 .slider {
-  width: 1300px;
+  width: 1100px;
   height: 440px;
   display: flex;
   align-items: center;
@@ -366,7 +395,28 @@ h3 {
 }
 
 
+@media screen and (max-width: 1280px){
+main {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
+h2 {
+  font-size: 32px;
+}
 
+h1 {
+  font-size: 56px;
+}
 
+.intro {
+  font-size: 24px;
+}
+.page_info_element>p {
+  font-size: 14px;
+}
 
+.author_text {
+  font-size: 14px;
+}
+}
