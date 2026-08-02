@@ -22,7 +22,7 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  animation: hero-panel-slide-out 3.4s ease-out forwards;
+  animation: hero-panel-slide-out 3.5s ease-out forwards;
 }
 
 .hero-yellow-panel-2 {
@@ -52,18 +52,16 @@
 .hero-text {
   position: relative;
   z-index: 2;
-  width: 345px;
-
-
+  width: min(24vw, 345px);
 }
 
 .hero-title {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-weight: 700;
-  font-size: 60px;
+  font-size: clamp(28px, 3.6vw + 8px, 60px);
   line-height: 1.15;
   color: #3D2314;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   animation:
     hero-fade-in 1.5s ease-out forwards,
     hero-slide-up 1s ease-in-out forwards,
@@ -73,7 +71,7 @@
 .hero-desc {
   font-family: 'Palanquin', sans-serif;
   font-weight: 400;
-  font-size: 28px;
+  font-size: clamp(14px, 1.5vw + 6.5px, 28px);
   line-height: 1.45;
   color: #3D2314;
   animation:
@@ -84,8 +82,8 @@
 
 .hero-spin {
   position: absolute;
-  width: 160px;
-  height: 160px;
+  width: clamp(50px, 11.11vw, 160px);
+  height: clamp(50px, 11.11vw, 160px);
   left: 43%;
   transform: translate(-50%, -50%);
   animation: spin 5s linear infinite;
@@ -96,15 +94,15 @@
 }
 
 .hero-spin>img {
-  width: 160px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
   animation: hero-spin-right 8s linear 6s infinite;
 }
 
 .hero-spin-orb {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 31.25%;
+  height: 31.25%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -131,7 +129,7 @@
 
 @keyframes hero-slide-up {
   from {
-    transform: translateY(60px);
+    transform: translateY(6vh);
   }
 
   to {
@@ -145,7 +143,7 @@
   }
 
   to {
-    transform: translateX(-400px);
+    transform: translateX(-26vw);
   }
 }
 
@@ -161,11 +159,11 @@
 
 @keyframes hero-panel-slide-in {
   from {
-    transform: translateX(498px);
+    transform: translateX(50vw);
   }
 
   to {
-    transform: translateX(-50px);
+    transform: translateX(-3vw);
   }
 }
 
@@ -210,6 +208,9 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+
+
 
 .main-content {
   display: flex;
@@ -256,7 +257,13 @@
   flex-shrink: 0;
 }
 
-.slider_a_slide img:first-child {
+.slider_a_slide picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slider_a_slide picture img {
   display: block;
   width: 100%;
   height: 100%;
