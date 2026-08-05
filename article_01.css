@@ -194,7 +194,7 @@ h1 {
 
 .carousel {
   width: 1100px;
-  height: 600px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,36 +218,13 @@ h3 {
   justify-content: center;
 }
 
-.slider_element {
-  z-index: 1;
-  height: 350px;
-  width: 440px;
-  border-radius: 16px;
-
-  transform: perspective(500px) rotateY(20deg) translateX(20px);
-  transform-origin: 50% 50%;
-
-  transition: all 250ms ease-in-out;
+.radio_button {
+  display: none;
 }
 
-.slider_element:not(:first-child) {
-  margin-left: -50px;
+.text {
+  display: flex;
 }
-
-.slider:has(.slider_element:hover) .slider_element:not(:hover):not(.slider_element:hover ~ .slider_element) {
-  transform: perspective(500px) rotateY(20deg) translateX(-15px);
-}
-
-.slider_element:hover {
-  z-index: 2;
-
-  transform: perspective(500px) rotateY(0deg) translateX(50px) scaleX(1.1) scaleY(1.1);
-}
-
-.slider_element:hover~.slider_element {
-  transform: perspective(500px) rotateY(-20deg) translateX(125px);
-}
-
 .list {
   width: 1000px;
   height: auto;
@@ -393,7 +370,38 @@ h3 {
   font-size: 18px;
   color: #4EA487;
 }
+@media screen and (min-width: 1280px) {
+.slider_element {
+  z-index: 1;
+  height: 350px;
+  width: 440px;
+  border-radius: 16px;
 
+  transform: perspective(500px) rotateY(20deg) translateX(20px);
+  transform-origin: 50% 50%;
+
+  transition: all 250ms ease-in-out;
+}
+
+.slider_element:not(:first-child) {
+  margin-left: -50px;
+}
+
+.slider:has(.slider_element:hover) .slider_element:not(:hover):not(.slider_element:hover ~ .slider_element) {
+  transform: perspective(500px) rotateY(20deg) translateX(-15px);
+}
+
+.slider_element:hover {
+  z-index: 2;
+
+  transform: perspective(500px) rotateY(0deg) translateX(50px) scaleX(1.1) scaleY(1.1);
+}
+
+.slider_element:hover~.slider_element {
+  transform: perspective(500px) rotateY(-20deg) translateX(125px);
+}
+
+}
 
 @media screen and (max-width: 1279px) {
   main {
@@ -420,6 +428,29 @@ h3 {
   .author_text {
     font-size: 14px;
   }
+
+.radio_button {
+  display: flex;
+  gap: 8px; 
+  align-items: center;
+}
+.radio_button input[type="radio"] {
+  appearance: none;
+  background-color: #4da3864d; 
+  height: 12px;
+  width: 12px;
+  border-radius: 50%; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+.radio_button input[type="radio"]:hover {
+  background-color: #4da38680; 
+}
+.radio_button input[type="radio"]:checked {  
+  background-color: #4EA487; 
+  width: 28px; 
+  border-radius: 6px; 
+}
 }
 
 @media screen and (max-width: 768px) {
