@@ -225,8 +225,9 @@ h3 {
 .text {
   display: flex;
 }
+
 .list {
-  width: 1000px;
+  max-width: 1000px;
   height: auto;
   overflow-wrap: break-word;
 }
@@ -237,7 +238,7 @@ h3 {
 }
 
 .pro_tipps {
-  width: 1130px;
+  max-width: 1130px;
   height: auto;
 }
 
@@ -266,14 +267,22 @@ h3 {
 }
 
 .share {
-  width: 490px;
+  width: 100%;
   height: auto;
   display: flex;
+  justify-content: center;
   padding-bottom: 80px;
 }
 
-.share_text {
+.share_center {
   width: 490px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.share_text {
+  max-width: 490px;
   height: auto;
 
   position: absolute;
@@ -298,8 +307,12 @@ h3 {
 }
 
 .share_arrow {
-  padding-top: 48px;
-  padding-bottom: 12px;
+  width: 95px;
+  height: 98px;
+  margin-top: 48px;
+  margin-bottom: 12px;
+  background-repeat: no-repeat;
+  background-image: url(./assets/article_01/vector_12.png);
 }
 
 .share_button_area {
@@ -370,36 +383,37 @@ h3 {
   font-size: 18px;
   color: #4EA487;
 }
+
 @media screen and (min-width: 1280px) {
-.slider_element {
-  z-index: 1;
-  height: 350px;
-  width: 440px;
-  border-radius: 16px;
+  .slider_element {
+    z-index: 1;
+    height: 350px;
+    width: 440px;
+    border-radius: 16px;
 
-  transform: perspective(500px) rotateY(20deg) translateX(20px);
-  transform-origin: 50% 50%;
+    transform: perspective(500px) rotateY(20deg) translateX(20px);
+    transform-origin: 50% 50%;
 
-  transition: all 250ms ease-in-out;
-}
+    transition: all 250ms ease-in-out;
+  }
 
-.slider_element:not(:first-child) {
-  margin-left: -50px;
-}
+  .slider_element:not(:first-child) {
+    margin-left: -50px;
+  }
 
-.slider:has(.slider_element:hover) .slider_element:not(:hover):not(.slider_element:hover ~ .slider_element) {
-  transform: perspective(500px) rotateY(20deg) translateX(-15px);
-}
+  .slider:has(.slider_element:hover) .slider_element:not(:hover):not(.slider_element:hover ~ .slider_element) {
+    transform: perspective(500px) rotateY(20deg) translateX(-15px);
+  }
 
-.slider_element:hover {
-  z-index: 2;
+  .slider_element:hover {
+    z-index: 2;
 
-  transform: perspective(500px) rotateY(0deg) translateX(50px) scaleX(1.1) scaleY(1.1);
-}
+    transform: perspective(500px) rotateY(0deg) translateX(50px) scaleX(1.1) scaleY(1.1);
+  }
 
-.slider_element:hover~.slider_element {
-  transform: perspective(500px) rotateY(-20deg) translateX(125px);
-}
+  .slider_element:hover~.slider_element {
+    transform: perspective(500px) rotateY(-20deg) translateX(125px);
+  }
 
 }
 
@@ -429,28 +443,35 @@ h3 {
     font-size: 14px;
   }
 
-.radio_button {
-  display: flex;
-  gap: 8px; 
-  align-items: center;
-}
-.radio_button input[type="radio"] {
-  appearance: none;
-  background-color: #4da3864d; 
-  height: 12px;
-  width: 12px;
-  border-radius: 50%; 
-  cursor: pointer;
-  transition: all 0.3s ease; 
-}
-.radio_button input[type="radio"]:hover {
-  background-color: #4da38680; 
-}
-.radio_button input[type="radio"]:checked {  
-  background-color: #4EA487; 
-  width: 28px; 
-  border-radius: 6px; 
-}
+  .slider {
+    overflow: hidden;
+  }
+
+  .radio_button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .radio_button input[type="radio"] {
+    appearance: none;
+    background-color: #4da3864d;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .radio_button input[type="radio"]:hover {
+    background-color: #4da38680;
+  }
+
+  .radio_button input[type="radio"]:checked {
+    background-color: #4EA487;
+    width: 28px;
+    border-radius: 6px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -470,7 +491,34 @@ h3 {
     width: auto;
   }
 
+  .pro_tipps_text {
+    margin-left: 0px;
+    padding: 24px 12px;
+  }
+.share_center {
+  max-width: 320px;
+  height: auto;
 }
+
+  .share_text>p {
+    font-size: 18px;
+  }
+.share_animation {
+  max-width: 490px;
+}
+  .share_arrow {
+    width: 32px;
+    height: 53px;
+    margin-top: 48px;
+    margin-bottom: 32px;
+    background-image: url(./assets/article_01/Vector\ 12_slim.png);
+  }
+  .share_button_area {
+  width: 280px;
+  }
+}
+
+
 
 @media screen and (max-width: 480px) {
   .page_info {
@@ -478,4 +526,11 @@ h3 {
     justify-content: flex-start;
     gap: 16px;
   }
+    .share_text>p {
+    font-size: 14px;
+  }
+  .share_button_area {
+  width: 248px;
+  }
+
 }
