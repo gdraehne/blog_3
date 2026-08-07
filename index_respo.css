@@ -144,34 +144,24 @@
 @media (max-width: 480px) {
 
   .hero-content {
-    position: relative;
+   
     width: auto;
     height: auto;
     aspect-ratio: 343 / 430;
-    margin: 24px 16px 32px;
     padding: 0;
     display: block;
     overflow: hidden;
-    border-radius: 24px;
-    background: url('assets/home/respo/hero/hero_cover_yellow.svg') top left / cover no-repeat, #F1C953;
-  }
-
-  .hero-yellow-panel,
-  .hero-yellow-panel-2 {
-    display: none;
   }
 
   .hero-image {
     position: absolute;
-    top: 18%;
     left: 0;
     right: 0;
     bottom: 0;
     width: auto;
     height: auto;
-    border-radius: 24px;
     overflow: hidden;
-    z-index: 1;
+    
   }
 
   .hero-image img {
@@ -182,19 +172,90 @@
     object-position: 68% 35%;
   }
 
+  .hero-yellow-panel {
+    animation: mobile-panel1-slide-out 2s ease-out 1.6s forwards;
+  }
+
+  .hero-yellow-panel-2 {
+    animation:
+      mobile-panel2-slide 2s ease-out 1.6s both,
+      mobile-panel2-slide-2 1s ease-out 3.6s forwards;
+  }
+
+  .hero-yellow-panel-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% center;
+  }
+
   .hero-text {
-    display: none;
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    top: 25%;
+    text-align: left;
+    opacity: 0;
+    animation:
+      mobile-fade-in 0.8s ease-out forwards,
+      mobile-fade-out 0.6s ease-out 3.5s forwards;
+  }
+
+  .hero-title,
+  .hero-desc {
+    animation: none;
   }
 
   .hero-spin {
-    left: 12px;
-    top: -10px;
+    position: absolute;
+    top: 44%;
+    left: 38%;
+    transform: translate(-50%, -50%);
     width: clamp(120px, 36vw, 160px);
     height: clamp(120px, 36vw, 160px);
-    transform: none;
     z-index: 2;
+    opacity: 0;
+    animation: mobile-fade-in 0.8s ease-out 4.6s forwards;
   }
 
+  .hero-spin > img {
+    animation: hero-spin-right 8s linear 5.4s infinite;
+  }
+
+  .hero-spin-orb {
+    opacity: 0;
+    animation: mobile-fade-in 0.8s ease-out 4.6s forwards;
+  }
+
+  @keyframes mobile-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes mobile-fade-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+
+  @keyframes mobile-panel1-slide-out {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+  }
+
+  @keyframes mobile-panel2-slide {
+    0%     { transform: translateX(70vw); }
+    100%  { transform: translateX(0); }  
+  
+  }
+   @keyframes mobile-panel2-slide-2 {
+    0%     { transform: translate(0, 0) scale(1, 1); }
+    100%  { transform: translate(-10vw, -30vw) scale(0.90, 0.75); }
+
+  }
+
+  
+  
+  
   .main {
     padding: 0 16px;
     margin-top: 32px;
